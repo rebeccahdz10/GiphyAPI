@@ -20,7 +20,7 @@ var userInput = "";
 
 for (var i = 0; i < topics.length; i++) {
     var buttons = $('<button>' + topics[i] + '</button>')
-    buttons.appendTo('#buttonCont');
+    buttons.appendTo('#buttonCont').addClass("newButton");
 }
 
 
