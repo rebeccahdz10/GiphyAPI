@@ -26,10 +26,10 @@ for (var i = 0; i < topics.length; i++) {
 
 
 $(".flowButton").on("click", function () {
-    var plants = $(this).val(topics[i]);
+    var flor = $(this).text;
 
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        plants + "&api_key=FEGUgBnb0ugsVKKqYGEX8N2f4cm4s81U&limit=10";
+        flor + "&api_key=FEGUgBnb0ugsVKKqYGEX8N2f4cm4s81U&limit=10";
 
     $.ajax({
         url: queryURL,
