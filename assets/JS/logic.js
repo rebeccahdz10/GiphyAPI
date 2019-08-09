@@ -47,7 +47,7 @@ $(".flowButton").on("click", function () {
                     var newDiv = $("<div>");
                     var rating = results[i].rating;
                     var p = $("<p>").text("Rating: " + rating);
-                    var flowImage = $("<img>");
+                    var flowImage = $("<img>").addClass("gif");
 
                     flowImage.attr("src", results[i].images.fixed_height.url);
 
@@ -58,6 +58,21 @@ $(".flowButton").on("click", function () {
                 }
             }
         });
+});
+
+$("#searchButt").on('click', function (event) {
+    event.preventDefault();
+
+    userInput = $("#search").val();
+
+    console.log(userInput);
+
+    var newButton = $("<button>").addClass("new");
+    $(".new").html(userInput);
+
+    newButton.appendTo('#buttonCont');
+
+
 });
 
 
