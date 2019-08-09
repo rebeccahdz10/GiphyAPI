@@ -72,6 +72,16 @@ $("#searchButt").on('click', function (event) {
 
     newButton.appendTo('#buttonCont');
 
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+        userInput + "&api_key=FEGUgBnb0ugsVKKqYGEX8N2f4cm4s81U&limit=10";
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response.data);
+    });
+
 
 });
 
